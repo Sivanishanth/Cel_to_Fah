@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Length converter</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1> Celsius to Fahrenheit</h1>
+     <div>
+        <input type="text" id="num1" placeholder="enter celsius">
+     </div>
+    
+     <div>
+        <button type="submit" onclick="converter()" id="btn">Convert</button>
+     </div>
+
+     <div id="rlt">
+
+     </div>
+
+    </div>
+     
+
+     <script>
+
+        function converter()
+        {
+
+            let num = document.getElementById("num1").value
+            let fah = (num * 9/5) + 32
+            let result = document.getElementById("rlt")
+            result.innerHTML = fah.toFixed(1) + " Fahrenheit"
+
+        }
+
+     </script>
+</body>
+</html>
